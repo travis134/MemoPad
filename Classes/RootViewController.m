@@ -37,6 +37,7 @@
 	
 	[self.tableView setAllowsSelectionDuringEditing:YES];
 	
+	//Set background and seperator colors
 	[self.tableView setSeparatorColor:[UIColor colorWithRed:.992 green:.886 blue:.286 alpha:1.00]];
 	[self.tableView setBackgroundColor:[UIColor colorWithRed:.992 green:.886 blue:.286 alpha:.50]];
 }
