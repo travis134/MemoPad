@@ -7,7 +7,7 @@
 //
 
 #import "MemoPadAppDelegate.h"
-#import "RootViewController.h"
+#import "CategoryViewController.h"
 
 
 @implementation MemoPadAppDelegate

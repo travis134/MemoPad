@@ -11,12 +11,14 @@
 #import "Note.h"
 #import "TextNote.h"
 
-@interface RootViewController : UITableViewController {
+@interface CategoryViewController : UITableViewController {
 	Category *category;
 	Note *tempNote;
 	IBOutlet UIViewController *addScreen;
 	IBOutlet UITextField *noteTitle, *noteBody;	
 }
+
+@property (nonatomic, retain) Category *category;
 
 -(void)addNote;
 -(IBAction)addItemButtonClicked: (id) sender;

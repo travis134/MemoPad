@@ -6,11 +6,12 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "CategoryViewController.h"
 
 
-@implementation RootViewController
+@implementation CategoryViewController
 
+@synthesize category;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	category = [[Category alloc] init];
+	//category = [[Category alloc] init];
 	self.title = [category title];
 	
 	UIBarButtonItem *addButton = [[[UIBarButtonItem alloc]
@@ -48,11 +49,18 @@
 	[self.tableView reloadData];
 }
 
-/*
+-(IBAction)addItemButtonClicked: (id) sender
+{
+	
+}
+
+
+
 - (void)viewWillAppear:(BOOL)animated {
+	[self.tableView reloadData];
     [super viewWillAppear:animated];
 }
-*/
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -154,6 +162,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+	//[navigationController pushViewController: animated:<#(BOOL)animated#>
 	/*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
      // ...
