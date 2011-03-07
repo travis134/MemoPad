@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		124441E7131C5BC10011C8F0 /* TextNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 124441E6131C5BC10011C8F0 /* TextNote.m */; };
-		128246D0130C8C80006696D7 /* NotesList.m in Sources */ = {isa = PBXBuildFile; fileRef = 128246CF130C8C80006696D7 /* NotesList.m */; };
+		128246D0130C8C80006696D7 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 128246CF130C8C80006696D7 /* Category.m */; };
 		128246D6130C8E21006696D7 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 128246D5130C8E21006696D7 /* Note.m */; };
 		128246D9130C9423006696D7 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 128246D8130C9423006696D7 /* Utilities.m */; };
+		12AA2CCB132595CA007E9C25 /* CategoryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 12AA2CCA132595CA007E9C25 /* CategoryList.m */; };
 		1D3623260D0F684500981E51 /* MemoPadAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* MemoPadAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -24,12 +25,14 @@
 /* Begin PBXFileReference section */
 		124441E5131C5BC10011C8F0 /* TextNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextNote.h; sourceTree = "<group>"; };
 		124441E6131C5BC10011C8F0 /* TextNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextNote.m; sourceTree = "<group>"; };
-		128246CE130C8C80006696D7 /* NotesList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesList.h; sourceTree = "<group>"; };
-		128246CF130C8C80006696D7 /* NotesList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesList.m; sourceTree = "<group>"; };
+		128246CE130C8C80006696D7 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		128246CF130C8C80006696D7 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		128246D4130C8E21006696D7 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
 		128246D5130C8E21006696D7 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		128246D7130C9423006696D7 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		128246D8130C9423006696D7 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		12AA2CC9132595CA007E9C25 /* CategoryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryList.h; sourceTree = "<group>"; };
+		12AA2CCA132595CA007E9C25 /* CategoryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryList.m; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* MemoPadAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoPadAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* MemoPadAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoPadAppDelegate.m; sourceTree = "<group>"; };
@@ -66,14 +69,16 @@
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* MemoPadAppDelegate.h */,
 				1D3623250D0F684500981E51 /* MemoPadAppDelegate.m */,
-				128246CE130C8C80006696D7 /* NotesList.h */,
-				128246CF130C8C80006696D7 /* NotesList.m */,
+				128246CE130C8C80006696D7 /* Category.h */,
+				128246CF130C8C80006696D7 /* Category.m */,
 				128246D4130C8E21006696D7 /* Note.h */,
 				128246D5130C8E21006696D7 /* Note.m */,
 				128246D7130C9423006696D7 /* Utilities.h */,
 				128246D8130C9423006696D7 /* Utilities.m */,
 				124441E5131C5BC10011C8F0 /* TextNote.h */,
 				124441E6131C5BC10011C8F0 /* TextNote.m */,
+				12AA2CC9132595CA007E9C25 /* CategoryList.h */,
+				12AA2CCA132595CA007E9C25 /* CategoryList.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -192,10 +197,11 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* MemoPadAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
-				128246D0130C8C80006696D7 /* NotesList.m in Sources */,
+				128246D0130C8C80006696D7 /* Category.m in Sources */,
 				128246D6130C8E21006696D7 /* Note.m in Sources */,
 				128246D9130C9423006696D7 /* Utilities.m in Sources */,
 				124441E7131C5BC10011C8F0 /* TextNote.m in Sources */,
+				12AA2CCB132595CA007E9C25 /* CategoryList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

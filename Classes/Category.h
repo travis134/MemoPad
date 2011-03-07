@@ -1,5 +1,5 @@
 //
-//  NotesList.h
+//  Category.h
 //  MemoPad
 //
 //  Created by travis sein on 2/16/11.
@@ -11,7 +11,7 @@
 #import "Note.h"
 #import "TextNote.h"
 
-@interface NotesList : NSObject {
+@interface Category : NSObject {
 	NSString *title;
 	NSMutableArray *notes;
 	BOOL locked;

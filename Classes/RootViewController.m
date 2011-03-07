@@ -19,8 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	notesList = [[NotesList alloc] init];
-	self.title = [notesList title];
+	category = [[Category alloc] init];
+	self.title = [category title];
 	
 	UIBarButtonItem *addButton = [[[UIBarButtonItem alloc]
 								   initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
@@ -44,7 +44,7 @@
 
 - (void)addNote
 {
-	[notesList addNewTextNote];
+	[category addNewTextNote];
 	[self.tableView reloadData];
 }
 
@@ -89,7 +89,7 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [notesList count];
+    return [category count];
 }
 
 
@@ -103,7 +103,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	cell.textLabel.text = [NSString stringWithFormat:@"%@", [[notesList noteAtIndex:[indexPath row]] title]];
+	cell.textLabel.text = [NSString stringWithFormat:@"%@", [[category noteAtIndex:[indexPath row]] title]];
 
     return cell;
 }
@@ -124,7 +124,7 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete the row from the data source.
-		[notesList removeNoteAtIndex:[indexPath row]];
+		[category removeNoteAtIndex:[indexPath row]];
 		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }   
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -136,7 +136,7 @@
 
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-	[notesList moveNoteAtIndex:[fromIndexPath row] toIndex:[toIndexPath row]];
+	[category moveNoteAtIndex:[fromIndexPath row] toIndex:[toIndexPath row]];
 }
 
 

@@ -1,14 +1,14 @@
 //
-//  NotesList.m
+//  Category.m
 //  MemoPad
 //
 //  Created by travis sein on 2/16/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "NotesList.h"
+#import "Category.h"
 
-@implementation NotesList
+@implementation Category
 
 @synthesize title, notes, locked;
 

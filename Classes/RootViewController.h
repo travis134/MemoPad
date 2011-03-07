@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NotesList.h"
+#import "Category.h"
 #import "Note.h"
 #import "TextNote.h"
 
 @interface RootViewController : UITableViewController {
-	NotesList *notesList;
+	Category *category;
 	Note *tempNote;
 	IBOutlet UIViewController *addScreen;
 	IBOutlet UITextField *noteTitle, *noteBody;	
