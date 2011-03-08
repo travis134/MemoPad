@@ -11,7 +11,7 @@
 
 @implementation CategoryViewController
 
-@synthesize category, editNote;
+@synthesize category, editTextNote, editPhotoNote;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -42,20 +42,39 @@
 	[self.tableView setSeparatorColor:[UIColor colorWithRed:.992 green:.886 blue:.286 alpha:1.00]];
 	[self.tableView setBackgroundColor:[UIColor colorWithRed:.992 green:.886 blue:.286 alpha:.50]];
 
-	self.editNote = [[EditNote alloc] init];
+	self.editTextNote = [[EditTextNoteViewController alloc] init];
+	self.editPhotoNote = [[EditPhotoNoteViewController alloc] init];
+}
+
+-(IBAction)showActionSheet:(id)sender
+{
+	UIActionSheet *popupNoteType = [[UIActionSheet alloc] initWithTitle:@"Note Type" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Text Note", @"Photo Note", @"Audio Note", nil];
+    popupNoteType.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+    [popupNoteType showInView:self.view];
+    [popupNoteType release];
+	
+}
+
+-(void)actionSheet:(UIActionSheet*)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+		if(buttonIndex == 0)
+		{
+			[category addNewTextNote];
+			[self.tableView reloadData];
+			[self.editTextNote setTextNote: (TextNote*) [category noteAtIndex:([category count]-1)]];
+			[self.navigationController pushViewController:self.editTextNote animated:YES];
+		}else if(buttonIndex == 1){
+			[category addNewPhotoNote];
+			[self.tableView reloadData];
+			[self.editPhotoNote setPhotoNote: (PhotoNote*) [category noteAtIndex:([category count]-1)]];
+			[self.navigationController pushViewController:self.editPhotoNote animated:YES];
+		}
 }
 
 - (void)addNote
 {
-	[category addNewTextNote];
-	[self.tableView reloadData];
+	[self showActionSheet:nil];
 }
-
--(IBAction)addItemButtonClicked: (id) sender
-{
-	
-}
-
 
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -165,8 +184,16 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 	//[self.categoryViewController setCategory: [categoryList categoryAtIndex:[indexPath row]]];
-	[self.editNote setTextNote: (TextNote*) [category noteAtIndex:[indexPath row]]];
-	[self.navigationController pushViewController:self.editNote animated:YES];
+	
+	if([[category noteAtIndex:[indexPath row]] noteType] == TextNoteType)
+	{
+		[self.editTextNote setTextNote: (TextNote*) [category noteAtIndex:[indexPath row]]];
+		[self.navigationController pushViewController:self.editTextNote animated:YES];
+	}else if ([[category noteAtIndex:[indexPath row]] noteType] == PhotoNoteType)
+	{
+		[self.editPhotoNote setPhotoNote: (PhotoNote*) [category noteAtIndex:[indexPath row]]];
+		[self.navigationController pushViewController:self.editPhotoNote animated:YES];	
+	}
 
 	
 	//[navigationController pushViewController: animated:<#(BOOL)animated#>

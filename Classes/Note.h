@@ -9,13 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "Utilities.h"
 
+typedef enum{TextNoteType, PhotoNoteType, AudioNoteType}NoteType;
+
 @interface Note : NSObject {
 	NSString *title;
 	BOOL locked;
+	NoteType noteType;
 }
 
 @property (nonatomic, retain) NSString *title;
 @property (assign) BOOL locked;
+@property (assign) NoteType noteType;
 
 -(void) lock;
 -(BOOL) unlock:(NSString*)inputPassword;

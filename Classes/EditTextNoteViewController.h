@@ -10,7 +10,7 @@
 #import "Note.h"
 #import "TextNote.h"
 
-@interface EditNote : UIViewController {
+@interface EditTextNoteViewController : UIViewController {
 	IBOutlet UITextView *noteTitle;	
 	IBOutlet UITextView *noteBody;	
 	TextNote *textNote;

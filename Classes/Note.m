@@ -10,7 +10,7 @@
 
 @implementation Note
 
-@synthesize title, locked;
+@synthesize title, locked, noteType;
 
 -(id) init
 {

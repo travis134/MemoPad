@@ -28,6 +28,11 @@
 	[notes addObject:[[TextNote alloc] init]];
 }
 
+- (void) addNewPhotoNote
+{
+	[notes addObject:[[PhotoNote alloc] init]];
+}
+
 -(Note*) noteAtIndex: (NSUInteger) inputIndex
 {
 	return (Note*) [notes objectAtIndex:inputIndex]; 

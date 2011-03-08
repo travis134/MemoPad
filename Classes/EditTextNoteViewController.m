@@ -6,10 +6,10 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "EditNote.h"
+#import "EditTextNoteViewController.h"
 
 
-@implementation EditNote
+@implementation EditTextNoteViewController
 
 @synthesize noteBody, noteTitle, textNote;
 

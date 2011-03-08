@@ -10,6 +10,7 @@
 #import "Utilities.h"
 #import "Note.h"
 #import "TextNote.h"
+#import "PhotoNote.h"
 
 @interface Category : NSObject {
 	NSString *title;
@@ -22,6 +23,7 @@
 @property (assign) BOOL locked;
 
 -(void) addNewTextNote;
+-(void) addNewPhotoNote;
 -(Note*) noteAtIndex: (NSUInteger) inputIndex;
 -(void) removeNoteAtIndex: (NSUInteger) inputIndex; 
 -(void) moveNoteAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;

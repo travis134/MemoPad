@@ -6,20 +6,20 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "TextNote.h"
+#import "PhotoNote.h"
 
 
-@implementation TextNote
+@implementation PhotoNote
 
 @synthesize body;
 
 -(id) init
 {
-		if(self = [super init])
-		{	
-			[self setNoteType:TextNoteType];
-			[self setBody: @"TextNote Body"];
-		}
+	if(self = [super init])
+	{
+		[self setNoteType:PhotoNoteType];
+		//[self setBody: @"TextNote Body"];
+	}
 	return self;
 }
 

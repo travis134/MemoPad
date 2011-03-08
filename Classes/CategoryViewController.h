@@ -7,22 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EditNote.h"
+#import "EditTextNoteViewController.h"
+#import "EditPhotoNoteViewController.h"
 #import "Category.h"
 #import "Note.h"
 #import "TextNote.h"
+#import "PhotoNote.h"
 
-@interface CategoryViewController : UITableViewController {
+@interface CategoryViewController : UITableViewController <UIActionSheetDelegate> {
 	Category *category;
 	Note *tempNote;
-	IBOutlet EditNote *editNote;
-	IBOutlet UITextField *noteTitle, *noteBody;	
+	IBOutlet EditTextNoteViewController *editTextNote;
+	IBOutlet EditPhotoNoteViewController *editPhotoNote;
+	//IBOutlet UITextField *noteTitle, *noteBody;
 }
 
 @property (nonatomic, retain) Category *category;
-@property (nonatomic, retain) EditNote *editNote;
+@property (nonatomic, retain) EditTextNoteViewController *editTextNote;
+@property (nonatomic, retain) EditPhotoNoteViewController *editPhotoNote;
 
 -(void)addNote;
--(IBAction)addItemButtonClicked: (id) sender;
+-(IBAction)showActionSheet:(id)sender;
 
 @end

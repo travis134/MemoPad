@@ -22,6 +22,5 @@
 @property (nonatomic, retain) IBOutlet CategoryViewController *categoryViewController;
 
 -(void)addCategory;
--(IBAction)addItemButtonClicked: (id) sender;
 
 @end
