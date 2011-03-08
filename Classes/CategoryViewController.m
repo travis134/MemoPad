@@ -11,7 +11,7 @@
 
 @implementation CategoryViewController
 
-@synthesize category;
+@synthesize category, editNote;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -41,6 +41,8 @@
 	//Set background and seperator colors
 	[self.tableView setSeparatorColor:[UIColor colorWithRed:.992 green:.886 blue:.286 alpha:1.00]];
 	[self.tableView setBackgroundColor:[UIColor colorWithRed:.992 green:.886 blue:.286 alpha:.50]];
+
+	self.editNote = [[EditNote alloc] init];
 }
 
 - (void)addNote
@@ -162,6 +164,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+	//[self.categoryViewController setCategory: [categoryList categoryAtIndex:[indexPath row]]];
+	[self.editNote setTextNote: (TextNote*) [category noteAtIndex:[indexPath row]]];
+	[self.navigationController pushViewController:self.editNote animated:YES];
+
+	
 	//[navigationController pushViewController: animated:<#(BOOL)animated#>
 	/*
 	 <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];

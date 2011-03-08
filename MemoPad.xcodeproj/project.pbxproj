@@ -11,6 +11,8 @@
 		128246D0130C8C80006696D7 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 128246CF130C8C80006696D7 /* Category.m */; };
 		128246D6130C8E21006696D7 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 128246D5130C8E21006696D7 /* Note.m */; };
 		128246D9130C9423006696D7 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 128246D8130C9423006696D7 /* Utilities.m */; };
+		129F4E791325AA010036DC09 /* EditNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 129F4E771325AA010036DC09 /* EditNote.m */; };
+		129F4E7A1325AA010036DC09 /* EditNote.xib in Resources */ = {isa = PBXBuildFile; fileRef = 129F4E781325AA010036DC09 /* EditNote.xib */; };
 		12AA2CCB132595CA007E9C25 /* CategoryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 12AA2CCA132595CA007E9C25 /* CategoryList.m */; };
 		12E37D7913259C00001F7659 /* CategoryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E37D7713259C00001F7659 /* CategoryListViewController.m */; };
 		12E37D7A13259C00001F7659 /* CategoryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12E37D7813259C00001F7659 /* CategoryListViewController.xib */; };
@@ -33,6 +35,9 @@
 		128246D5130C8E21006696D7 /* Note.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Note.m; sourceTree = "<group>"; };
 		128246D7130C9423006696D7 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		128246D8130C9423006696D7 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		129F4E761325AA010036DC09 /* EditNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNote.h; sourceTree = "<group>"; };
+		129F4E771325AA010036DC09 /* EditNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditNote.m; sourceTree = "<group>"; };
+		129F4E781325AA010036DC09 /* EditNote.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditNote.xib; path = Classes/EditNote.xib; sourceTree = "<group>"; };
 		12AA2CC9132595CA007E9C25 /* CategoryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryList.h; sourceTree = "<group>"; };
 		12AA2CCA132595CA007E9C25 /* CategoryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryList.m; sourceTree = "<group>"; };
 		12E37D7613259C00001F7659 /* CategoryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryListViewController.h; sourceTree = "<group>"; };
@@ -86,6 +91,8 @@
 				12AA2CCA132595CA007E9C25 /* CategoryList.m */,
 				12E37D7613259C00001F7659 /* CategoryListViewController.h */,
 				12E37D7713259C00001F7659 /* CategoryListViewController.m */,
+				129F4E761325AA010036DC09 /* EditNote.h */,
+				129F4E771325AA010036DC09 /* EditNote.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -122,6 +129,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				129F4E781325AA010036DC09 /* EditNote.xib */,
 				12E37D7813259C00001F7659 /* CategoryListViewController.xib */,
 				28F335F01007B36200424DE2 /* CategoryViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
@@ -193,6 +201,7 @@
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				28F335F11007B36200424DE2 /* CategoryViewController.xib in Resources */,
 				12E37D7A13259C00001F7659 /* CategoryListViewController.xib in Resources */,
+				129F4E7A1325AA010036DC09 /* EditNote.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +221,7 @@
 				124441E7131C5BC10011C8F0 /* TextNote.m in Sources */,
 				12AA2CCB132595CA007E9C25 /* CategoryList.m in Sources */,
 				12E37D7913259C00001F7659 /* CategoryListViewController.m in Sources */,
+				129F4E791325AA010036DC09 /* EditNote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
