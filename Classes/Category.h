@@ -11,6 +11,7 @@
 #import "Note.h"
 #import "TextNote.h"
 #import "PhotoNote.h"
+#import "AudioNote.h"
 
 @interface Category : NSObject {
 	NSString *title;
@@ -24,6 +25,7 @@
 
 -(void) addNewTextNote;
 -(void) addNewPhotoNote;
+-(void) addNewAudioNote;
 -(Note*) noteAtIndex: (NSUInteger) inputIndex;
 -(void) removeNoteAtIndex: (NSUInteger) inputIndex; 
 -(void) moveNoteAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex;

@@ -16,4 +16,17 @@
 		return @"Password";
 }
 
++(NSString*) getUUID
+{
+	CFUUIDRef theUUID = CFUUIDCreate(NULL);
+	CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+	CFRelease(theUUID);
+	return [(NSString *)string autorelease];
+}
+
++(NSString*) getDocumentsDirectory
+{
+	return [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+}
+
 @end

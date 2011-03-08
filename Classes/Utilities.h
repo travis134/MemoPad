@@ -14,5 +14,7 @@
 }
 
 +(NSString*) getPasswordHash;
++(NSString*) getUUID;
++(NSString*) getDocumentsDirectory;
 
 @end

@@ -11,7 +11,7 @@
 
 @implementation CategoryViewController
 
-@synthesize category, editTextNote, editPhotoNote;
+@synthesize category, editTextNote, editPhotoNote, editAudioNote;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -44,6 +44,7 @@
 
 	self.editTextNote = [[EditTextNoteViewController alloc] init];
 	self.editPhotoNote = [[EditPhotoNoteViewController alloc] init];
+	self.editAudioNote = [[EditAudioNoteViewController alloc] init];
 }
 
 -(IBAction)showActionSheet:(id)sender
@@ -68,6 +69,11 @@
 			[self.tableView reloadData];
 			[self.editPhotoNote setPhotoNote: (PhotoNote*) [category noteAtIndex:([category count]-1)]];
 			[self.navigationController pushViewController:self.editPhotoNote animated:YES];
+		}else if(buttonIndex == 2){
+			[category addNewAudioNote];
+			[self.tableView reloadData];
+			[self.editAudioNote setAudioNote: (AudioNote*) [category noteAtIndex:([category count]-1)]];
+			[self.navigationController pushViewController:self.editAudioNote animated:YES];
 		}
 }
 

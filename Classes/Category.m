@@ -33,6 +33,11 @@
 	[notes addObject:[[PhotoNote alloc] init]];
 }
 
+- (void) addNewAudioNote
+{
+	[notes addObject:[[AudioNote alloc] init]];
+}
+
 -(Note*) noteAtIndex: (NSUInteger) inputIndex
 {
 	return (Note*) [notes objectAtIndex:inputIndex]; 

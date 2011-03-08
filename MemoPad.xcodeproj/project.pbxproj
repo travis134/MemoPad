@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1243F8EE1326E38200F784FE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1243F8ED1326E38200F784FE /* AVFoundation.framework */; };
+		1243F8F41326E39100F784FE /* EditAudioNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1243F8F21326E39100F784FE /* EditAudioNoteViewController.m */; };
+		1243F8F51326E39100F784FE /* EditAudioNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1243F8F31326E39100F784FE /* EditAudioNoteViewController.xib */; };
+		1243F9091326E4B100F784FE /* AudioNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 1243F9081326E4B100F784FE /* AudioNote.m */; };
 		124441E7131C5BC10011C8F0 /* TextNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 124441E6131C5BC10011C8F0 /* TextNote.m */; };
 		1266D6C91325E80100A02D9F /* EditPhotoNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1266D6C71325E80100A02D9F /* EditPhotoNoteViewController.m */; };
 		1266D6CA1325E80100A02D9F /* EditPhotoNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1266D6C81325E80100A02D9F /* EditPhotoNoteViewController.xib */; };
@@ -31,6 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1243F8ED1326E38200F784FE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1243F8F11326E39100F784FE /* EditAudioNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditAudioNoteViewController.h; sourceTree = "<group>"; };
+		1243F8F21326E39100F784FE /* EditAudioNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditAudioNoteViewController.m; sourceTree = "<group>"; };
+		1243F8F31326E39100F784FE /* EditAudioNoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditAudioNoteViewController.xib; path = Classes/EditAudioNoteViewController.xib; sourceTree = "<group>"; };
+		1243F9071326E4B100F784FE /* AudioNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioNote.h; sourceTree = "<group>"; };
+		1243F9081326E4B100F784FE /* AudioNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioNote.m; sourceTree = "<group>"; };
 		124441E5131C5BC10011C8F0 /* TextNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextNote.h; sourceTree = "<group>"; };
 		124441E6131C5BC10011C8F0 /* TextNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextNote.m; sourceTree = "<group>"; };
 		1266D6C61325E80100A02D9F /* EditPhotoNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPhotoNoteViewController.h; sourceTree = "<group>"; };
@@ -76,6 +86,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
+				1243F8EE1326E38200F784FE /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,28 +96,32 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				28C286DF0D94DF7D0034E888 /* CategoryViewController.h */,
-				28C286E00D94DF7D0034E888 /* CategoryViewController.m */,
-				1D3623240D0F684500981E51 /* MemoPadAppDelegate.h */,
-				1D3623250D0F684500981E51 /* MemoPadAppDelegate.m */,
-				128246CE130C8C80006696D7 /* Category.h */,
-				128246CF130C8C80006696D7 /* Category.m */,
+				1243F9071326E4B100F784FE /* AudioNote.h */,
+				1243F9081326E4B100F784FE /* AudioNote.m */,
 				128246D4130C8E21006696D7 /* Note.h */,
 				128246D5130C8E21006696D7 /* Note.m */,
-				128246D7130C9423006696D7 /* Utilities.h */,
-				128246D8130C9423006696D7 /* Utilities.m */,
+				1266D6D21325E9AB00A02D9F /* PhotoNote.h */,
+				1266D6D31325E9AB00A02D9F /* PhotoNote.m */,
 				124441E5131C5BC10011C8F0 /* TextNote.h */,
 				124441E6131C5BC10011C8F0 /* TextNote.m */,
+				128246CE130C8C80006696D7 /* Category.h */,
+				128246CF130C8C80006696D7 /* Category.m */,
 				12AA2CC9132595CA007E9C25 /* CategoryList.h */,
 				12AA2CCA132595CA007E9C25 /* CategoryList.m */,
 				12E37D7613259C00001F7659 /* CategoryListViewController.h */,
 				12E37D7713259C00001F7659 /* CategoryListViewController.m */,
-				129F4E761325AA010036DC09 /* EditTextNoteViewController.h */,
-				129F4E771325AA010036DC09 /* EditTextNoteViewController.m */,
+				28C286DF0D94DF7D0034E888 /* CategoryViewController.h */,
+				28C286E00D94DF7D0034E888 /* CategoryViewController.m */,
+				1243F8F11326E39100F784FE /* EditAudioNoteViewController.h */,
+				1243F8F21326E39100F784FE /* EditAudioNoteViewController.m */,
 				1266D6C61325E80100A02D9F /* EditPhotoNoteViewController.h */,
 				1266D6C71325E80100A02D9F /* EditPhotoNoteViewController.m */,
-				1266D6D21325E9AB00A02D9F /* PhotoNote.h */,
-				1266D6D31325E9AB00A02D9F /* PhotoNote.m */,
+				129F4E761325AA010036DC09 /* EditTextNoteViewController.h */,
+				129F4E771325AA010036DC09 /* EditTextNoteViewController.m */,
+				128246D7130C9423006696D7 /* Utilities.h */,
+				128246D8130C9423006696D7 /* Utilities.m */,
+				1D3623240D0F684500981E51 /* MemoPadAppDelegate.h */,
+				1D3623250D0F684500981E51 /* MemoPadAppDelegate.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -143,6 +158,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1243F8F31326E39100F784FE /* EditAudioNoteViewController.xib */,
 				1266D6D01325E93000A02D9F /* camera_icon.gif */,
 				1266D6C81325E80100A02D9F /* EditPhotoNoteViewController.xib */,
 				129F4E781325AA010036DC09 /* EditTextNoteViewController.xib */,
@@ -160,6 +176,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
+				1243F8ED1326E38200F784FE /* AVFoundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -220,6 +237,7 @@
 				129F4E7A1325AA010036DC09 /* EditTextNoteViewController.xib in Resources */,
 				1266D6CA1325E80100A02D9F /* EditPhotoNoteViewController.xib in Resources */,
 				1266D6D11325E93000A02D9F /* camera_icon.gif in Resources */,
+				1243F8F51326E39100F784FE /* EditAudioNoteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +260,8 @@
 				129F4E791325AA010036DC09 /* EditTextNoteViewController.m in Sources */,
 				1266D6C91325E80100A02D9F /* EditPhotoNoteViewController.m in Sources */,
 				1266D6D41325E9AB00A02D9F /* PhotoNote.m in Sources */,
+				1243F8F41326E39100F784FE /* EditAudioNoteViewController.m in Sources */,
+				1243F9091326E4B100F784FE /* AudioNote.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

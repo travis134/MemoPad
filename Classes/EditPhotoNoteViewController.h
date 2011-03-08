@@ -11,8 +11,8 @@
 #import "PhotoNote.h"
 
 @interface EditPhotoNoteViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
-	IBOutlet UITextView *noteTitle;	
-	IBOutlet UIImageView *noteBody;	
+	UITextView *noteTitle;	
+	UIImageView *noteBody;	
 	UIButton *takePhotoButton;
 	UIButton *pickPhotoButton;
 	PhotoNote *photoNote;

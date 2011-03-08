@@ -18,7 +18,6 @@
 	if(self = [super init])
 	{
 		[self setNoteType:PhotoNoteType];
-		//[self setBody: @"TextNote Body"];
 	}
 	return self;
 }
