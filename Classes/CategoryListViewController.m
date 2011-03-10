@@ -13,7 +13,7 @@
 @implementation CategoryListViewController
 
 
-@synthesize categoryViewController;
+@synthesize categoryViewController, categoryTitleTextField;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -41,16 +41,63 @@
 	[self.tableView setAllowsSelectionDuringEditing:YES];
 	
 	//Set background and seperator colors
-	[self.tableView setSeparatorColor:[UIColor colorWithRed:.992 green:.886 blue:.286 alpha:1.00]];
-	[self.tableView setBackgroundColor:[UIColor colorWithRed:.992 green:.886 blue:.286 alpha:.50]];
+	[self.tableView setSeparatorColor:[UIColor colorWithRed:.71 green:.62 blue:.145 alpha:1.00]];
+	[self.tableView setBackgroundColor:[UIColor colorWithRed:.992 green:.941 blue:.639 alpha:1.00]];
 
+	[self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:.353 green:.243 blue:.180 alpha:1.00]];
+	[self.navigationController.toolbar setTintColor:[UIColor colorWithRed:.353 green:.243 blue:.180 alpha:1.00]];
+	
 	self.categoryViewController = [[CategoryViewController alloc] init];
+	
+	self.categoryTitleTextField = [[UITextField alloc] initWithFrame:CGRectMake(12.0, 45.0, 260.0, 25.0)];
+	[categoryTitleTextField setBackgroundColor:[UIColor whiteColor]];
+	
 }
 
 - (void)addCategory
 {
-	[categoryList addNewCategory];
+	categoryTitleTextField.text = @"";
+	UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Category Title" message:@"_" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+	myAlertView.tag = 0;
+	[myAlertView addSubview:categoryTitleTextField];
+	[myAlertView show];
+	[myAlertView release];
 	[self.tableView reloadData];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if(alertView.tag == 0)
+	{
+		if(buttonIndex == 0)
+		{
+			
+		}
+		else if(buttonIndex == 1)
+		{
+			if(categoryTitleTextField.text != @"")
+			{
+				[categoryList addNewCategory];
+				[[categoryList categoryAtIndex:([categoryList count]-1)] setTitle:categoryTitleTextField.text];
+				[self.tableView reloadData];
+			}
+		}
+	}
+	else if(alertView.tag == 1)
+	{
+		if(buttonIndex == 0)
+		{
+			
+		}
+		else if(buttonIndex == 1)
+		{
+			if(categoryTitleTextField.text != @"")
+			{
+				[[categoryList categoryAtIndex:currentIndex] setTitle:categoryTitleTextField.text];
+				[self.tableView reloadData];
+			}
+		}
+	}
 }
 
 /*
@@ -159,8 +206,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	[self.categoryViewController setCategory: [categoryList categoryAtIndex:[indexPath row]]];
-	[self.navigationController pushViewController:self.categoryViewController animated:YES];
+	if([self.tableView isEditing])
+	{
+		currentIndex = indexPath.row;
+		categoryTitleTextField.text = [[categoryList categoryAtIndex:[indexPath row]] title];
+		UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Category Name" message:@"_" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+		myAlertView.tag = 1;
+		[myAlertView addSubview:categoryTitleTextField];
+		[myAlertView show];
+		[myAlertView release];
+		[self.tableView reloadData];
+	}else{
+		self.categoryViewController.title = [[categoryList categoryAtIndex:[indexPath row]] title];
+		[self.categoryViewController setCategory: [categoryList categoryAtIndex:[indexPath row]]];
+		[self.navigationController pushViewController:self.categoryViewController animated:YES];
+		
+	}
 }
 
 

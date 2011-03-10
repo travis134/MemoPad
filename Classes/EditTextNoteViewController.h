@@ -11,12 +11,12 @@
 #import "TextNote.h"
 
 @interface EditTextNoteViewController : UIViewController {
-	IBOutlet UITextView *noteTitle;	
+	IBOutlet UITextField *noteTitle;	
 	IBOutlet UITextView *noteBody;	
 	TextNote *textNote;
 }
 
-@property (nonatomic, retain) IBOutlet UITextView *noteTitle;
+@property (nonatomic, retain) IBOutlet UITextField *noteTitle;
 @property (nonatomic, retain) IBOutlet UITextView *noteBody;
 @property (nonatomic, retain) TextNote *textNote;
 

@@ -29,7 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	[self.view setBackgroundColor:[UIColor colorWithRed:.992 green:.886 blue:.286 alpha:.50]];
+	[self.noteTitle setBackgroundColor:[UIColor colorWithRed:.992 green:.941 blue:.639 alpha:1.00]];
+	[self.noteTitle setFont:[UIFont fontWithName:@"Marker Felt" size:36]];
+	[self.noteTitle setTextColor:[UIColor colorWithRed:.192 green:.192 blue:.192 alpha:1.00]];
+	[self.view setBackgroundColor:[UIColor colorWithRed:.992 green:.941 blue:.639 alpha:1.00]];
+	[self.noteBody setBackgroundColor:[UIColor colorWithRed:.992 green:.941 blue:.639 alpha:1.00]];
 	
 	self.noteTitle.text = [textNote title];
 	self.noteBody.text = [textNote body];
@@ -61,6 +65,10 @@
 {
 	[textNote setTitle: noteTitle.text];
 	[textNote setBody: noteBody.text];
+	[UIView beginAnimations:@"animation" context:nil];
+	[UIView setAnimationDuration:0.5];
+	[UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:NO]; 
+	[UIView commitAnimations];
 }
 
 - (void)viewDidUnload {

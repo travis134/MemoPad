@@ -24,13 +24,13 @@
 		ENC_ULAW = 5,
 		ENC_PCM = 6,
 	} encodingTypes;
-	UITextView *noteTitle;
+	UITextField *noteTitle;
 	UIButton *recordButton;
 	UIButton *stopButton;
 	AudioNote *audioNote;
 }
 
-@property (nonatomic, retain) IBOutlet UITextView *noteTitle;
+@property (nonatomic, retain) IBOutlet UITextField *noteTitle;
 @property (nonatomic, retain) AudioNote *audioNote;
 @property (nonatomic, retain) IBOutlet UIButton *recordButton;
 @property (nonatomic, retain) IBOutlet UIButton *stopButton;

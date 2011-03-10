@@ -18,7 +18,7 @@
 	if(self = [super init])
 	{
 		[self setNoteType:AudioNoteType];
-		[self setBody: [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@.caf", [Utilities getDocumentsDirectory], [Utilities getUUID]]]];
+		[self setBody: [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/%@.caf", [Utilities getDocumentsDirectory], [Utilities getTimeStamp:@"%Y-%m-%d_%H-%M-%S"]]]];
 	}
 	return self;
 }

@@ -11,14 +11,14 @@
 #import "PhotoNote.h"
 
 @interface EditPhotoNoteViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
-	UITextView *noteTitle;	
+	UITextField *noteTitle;	
 	UIImageView *noteBody;	
 	UIButton *takePhotoButton;
 	UIButton *pickPhotoButton;
 	PhotoNote *photoNote;
 }
 
-@property (nonatomic, retain) IBOutlet UITextView *noteTitle;
+@property (nonatomic, retain) IBOutlet UITextField *noteTitle;
 @property (nonatomic, retain) IBOutlet UIImageView *noteBody;
 @property (nonatomic, retain) PhotoNote *photoNote;
 @property (nonatomic, retain) IBOutlet UIButton *takePhotoButton;

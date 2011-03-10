@@ -39,8 +39,9 @@
 	[self.tableView setAllowsSelectionDuringEditing:YES];
 	
 	//Set background and seperator colors
-	[self.tableView setSeparatorColor:[UIColor colorWithRed:.992 green:.886 blue:.286 alpha:1.00]];
-	[self.tableView setBackgroundColor:[UIColor colorWithRed:.992 green:.886 blue:.286 alpha:.50]];
+	[self.tableView setSeparatorColor:[UIColor colorWithRed:.71 green:.62 blue:.145 alpha:1.00]];
+	
+	[self.tableView setBackgroundColor:[UIColor colorWithRed:.992 green:.941 blue:.639 alpha:1.00]];
 
 	self.editTextNote = [[EditTextNoteViewController alloc] init];
 	self.editPhotoNote = [[EditPhotoNoteViewController alloc] init];
@@ -63,17 +64,29 @@
 			[category addNewTextNote];
 			[self.tableView reloadData];
 			[self.editTextNote setTextNote: (TextNote*) [category noteAtIndex:([category count]-1)]];
-			[self.navigationController pushViewController:self.editTextNote animated:YES];
+			[UIView beginAnimations:@"animation" context:nil];
+			[UIView setAnimationDuration:0.5];
+			[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO]; 
+			[self.navigationController pushViewController:self.editTextNote animated:NO];
+			[UIView commitAnimations];
 		}else if(buttonIndex == 1){
 			[category addNewPhotoNote];
 			[self.tableView reloadData];
 			[self.editPhotoNote setPhotoNote: (PhotoNote*) [category noteAtIndex:([category count]-1)]];
-			[self.navigationController pushViewController:self.editPhotoNote animated:YES];
+			[UIView beginAnimations:@"animation" context:nil];
+			[UIView setAnimationDuration:0.5];
+			[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO]; 
+			[self.navigationController pushViewController:self.editPhotoNote animated:NO];
+			[UIView commitAnimations];
 		}else if(buttonIndex == 2){
 			[category addNewAudioNote];
 			[self.tableView reloadData];
 			[self.editAudioNote setAudioNote: (AudioNote*) [category noteAtIndex:([category count]-1)]];
-			[self.navigationController pushViewController:self.editAudioNote animated:YES];
+			[UIView beginAnimations:@"animation" context:nil];
+			[UIView setAnimationDuration:0.5];
+			[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO]; 
+			[self.navigationController pushViewController:self.editAudioNote animated:NO];
+			[UIView commitAnimations];
 		}
 }
 
@@ -194,11 +207,28 @@
 	if([[category noteAtIndex:[indexPath row]] noteType] == TextNoteType)
 	{
 		[self.editTextNote setTextNote: (TextNote*) [category noteAtIndex:[indexPath row]]];
-		[self.navigationController pushViewController:self.editTextNote animated:YES];
+		[UIView beginAnimations:@"animation" context:nil];
+		[UIView setAnimationDuration:0.5];
+		[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO]; 
+		[self.navigationController pushViewController:self.editTextNote animated:NO];
+		[UIView commitAnimations];
+		
 	}else if ([[category noteAtIndex:[indexPath row]] noteType] == PhotoNoteType)
 	{
 		[self.editPhotoNote setPhotoNote: (PhotoNote*) [category noteAtIndex:[indexPath row]]];
-		[self.navigationController pushViewController:self.editPhotoNote animated:YES];	
+		[UIView beginAnimations:@"animation" context:nil];
+		[UIView setAnimationDuration:0.5];
+		[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO]; 
+		[self.navigationController pushViewController:self.editPhotoNote animated:NO];
+		[UIView commitAnimations];
+	}else if ([[category noteAtIndex:[indexPath row]] noteType] == AudioNoteType)
+	{
+		[self.editAudioNote setAudioNote: (AudioNote*) [category noteAtIndex:[indexPath row]]];
+		[UIView beginAnimations:@"animation" context:nil];
+		[UIView setAnimationDuration:0.5];
+		[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO]; 
+		[self.navigationController pushViewController:self.editAudioNote animated:NO];
+		[UIView commitAnimations];
 	}
 
 	

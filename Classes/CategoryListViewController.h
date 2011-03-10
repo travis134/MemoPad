@@ -14,12 +14,14 @@
 @interface CategoryListViewController : UITableViewController {
 	CategoryList *categoryList;
 	Category *tempCategory;
-	IBOutlet UIViewController *addScreen;
-	IBOutlet UITextField *categoryTitle;
-	IBOutlet CategoryViewController *categoryViewController;
+	UIViewController *addScreen;
+	UITextField *categoryTitleTextField;
+	CategoryViewController *categoryViewController;
+	int currentIndex;
 }
 
 @property (nonatomic, retain) IBOutlet CategoryViewController *categoryViewController;
+@property (nonatomic, retain) UITextField *categoryTitleTextField;
 
 -(void)addCategory;
 
