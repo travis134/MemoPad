@@ -16,7 +16,7 @@
 		1266D6CA1325E80100A02D9F /* EditPhotoNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1266D6C81325E80100A02D9F /* EditPhotoNoteViewController.xib */; };
 		1266D6D11325E93000A02D9F /* camera_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1266D6D01325E93000A02D9F /* camera_icon.gif */; };
 		1266D6D41325E9AB00A02D9F /* PhotoNote.m in Sources */ = {isa = PBXBuildFile; fileRef = 1266D6D31325E9AB00A02D9F /* PhotoNote.m */; };
-		126F6B351328491B006D0F47 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F6B341328491B006D0F47 /* icon.png */; };
+		126F6D801328693E006D0F47 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F6D7F1328693E006D0F47 /* icon.png */; };
 		128246D0130C8C80006696D7 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 128246CF130C8C80006696D7 /* Category.m */; };
 		128246D6130C8E21006696D7 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 128246D5130C8E21006696D7 /* Note.m */; };
 		128246D9130C9423006696D7 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 128246D8130C9423006696D7 /* Utilities.m */; };
@@ -50,7 +50,7 @@
 		1266D6D01325E93000A02D9F /* camera_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = camera_icon.gif; sourceTree = "<group>"; };
 		1266D6D21325E9AB00A02D9F /* PhotoNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoNote.h; sourceTree = "<group>"; };
 		1266D6D31325E9AB00A02D9F /* PhotoNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoNote.m; sourceTree = "<group>"; };
-		126F6B341328491B006D0F47 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		126F6D7F1328693E006D0F47 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		128246CE130C8C80006696D7 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
 		128246CF130C8C80006696D7 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		128246D4130C8E21006696D7 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				126F6B341328491B006D0F47 /* icon.png */,
+				126F6D7F1328693E006D0F47 /* icon.png */,
 				1243F8F31326E39100F784FE /* EditAudioNoteViewController.xib */,
 				1266D6D01325E93000A02D9F /* camera_icon.gif */,
 				1266D6C81325E80100A02D9F /* EditPhotoNoteViewController.xib */,
@@ -241,7 +241,7 @@
 				1266D6CA1325E80100A02D9F /* EditPhotoNoteViewController.xib in Resources */,
 				1266D6D11325E93000A02D9F /* camera_icon.gif in Resources */,
 				1243F8F51326E39100F784FE /* EditAudioNoteViewController.xib in Resources */,
-				126F6B351328491B006D0F47 /* icon.png in Resources */,
+				126F6D801328693E006D0F47 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

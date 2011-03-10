@@ -942,6 +942,13 @@
 		vrLen = 646;
 		vrLoc = 0;
 	};
+	126F6B341328491B006D0F47 /* icon.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = icon.png;
+		path = /Users/travissein/Documents/MemoPad/icon.png;
+		sourceTree = "<absolute>";
+	};
 	126F6B3B13284977006D0F47 /* XCBuildMessageTextBookmark */ = {
 		isa = PBXTextBookmark;
 		comments = "Request for member 'Text' in something not a structure or union";
@@ -4190,6 +4197,36 @@
 		vrLen = 985;
 		vrLoc = 783;
 	};
+	126F6D7B1328690F006D0F47 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 12E37D7713259C00001F7659 /* CategoryListViewController.m */;
+		name = "CategoryListViewController.m: 222";
+		rLen = 0;
+		rLoc = 6748;
+		rType = 0;
+		vrLen = 471;
+		vrLoc = 6757;
+	};
+	126F6D7C1328690F006D0F47 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* CategoryViewController.m */;
+		name = "CategoryViewController.m: 50";
+		rLen = 0;
+		rLoc = 1369;
+		rType = 0;
+		vrLen = 985;
+		vrLoc = 783;
+	};
+	126F6D7D1328690F006D0F47 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28C286E00D94DF7D0034E888 /* CategoryViewController.m */;
+		name = "CategoryViewController.m: 50";
+		rLen = 0;
+		rLoc = 1369;
+		rType = 0;
+		vrLen = 896;
+		vrLoc = 877;
+	};
 	128246B9130C8C14006696D7 /* MemoPad */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -4380,7 +4417,7 @@
 			sepNavFolds = "{\n    c =     (\n                {\n            l = \"(BOOL)animated\";\n            r = \"{8290, 18}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{8315, 24}\";\n            s = 1;\n        },\n                {\n            l = DetailViewController;\n            r = \"{8366, 24}\";\n            s = 1;\n        },\n                {\n            l = \"Nib name\";\n            r = \"{8416, 12}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 9112}\";\n    s = 0;\n}";
 			sepNavIntBoundsRect = "{{0, 0}, {1559, 3549}}";
 			sepNavSelRange = "{1369, 0}";
-			sepNavVisRange = "{783, 985}";
+			sepNavVisRange = "{877, 896}";
 			sepNavWindowFrame = "{{19, 315}, {750, 558}}";
 		};
 	};
@@ -4834,6 +4871,9 @@
 			126F6D7413286683006D0F47 /* PBXTextBookmark */ = 126F6D7413286683006D0F47 /* PBXTextBookmark */;
 			126F6D7513286685006D0F47 /* PBXTextBookmark */ = 126F6D7513286685006D0F47 /* PBXTextBookmark */;
 			126F6D7613286685006D0F47 /* PBXTextBookmark */ = 126F6D7613286685006D0F47 /* PBXTextBookmark */;
+			126F6D7B1328690F006D0F47 /* PBXTextBookmark */ = 126F6D7B1328690F006D0F47 /* PBXTextBookmark */;
+			126F6D7C1328690F006D0F47 /* PBXTextBookmark */ = 126F6D7C1328690F006D0F47 /* PBXTextBookmark */;
+			126F6D7D1328690F006D0F47 /* PBXTextBookmark */ = 126F6D7D1328690F006D0F47 /* PBXTextBookmark */;
 			129F4EB21325AD030036DC09 = 129F4EB21325AD030036DC09 /* PBXTextBookmark */;
 			12E37D7D13259C1E001F7659 = 12E37D7D13259C1E001F7659 /* PBXTextBookmark */;
 		};
