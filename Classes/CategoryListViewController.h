@@ -24,5 +24,8 @@
 @property (nonatomic, retain) UITextField *categoryTitleTextField;
 
 -(void)addCategory;
+-(void)quickTextNote;
+-(void)quickPhotoNote;
+-(void)quickAudioNote;
 
 @end

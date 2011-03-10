@@ -30,9 +30,25 @@
 								   target:self
 								   action:@selector(addCategory)] autorelease];
 	
+	UIBarButtonItem *quickTextNoteButton = [[[UIBarButtonItem alloc]
+								   initWithBarButtonSystemItem:UIBarButtonSystemItemCompose
+								   target:self
+								   action:@selector(quickTextNote)] autorelease];
+	
+	UIBarButtonItem *quickPhotoNoteButton = [[[UIBarButtonItem alloc]
+											 initWithBarButtonSystemItem:UIBarButtonSystemItemCamera
+											 target:self
+											 action:@selector(quickPhotoNote)] autorelease];
+	
+	UIBarButtonItem *quickAudioNoteButton = [[[UIBarButtonItem alloc]
+											  initWithBarButtonSystemItem:UIBarButtonSystemItemPlay
+											  target:self
+											  action:@selector(quickAudioNote)] autorelease];
+	
+	
 	self.navigationItem.rightBarButtonItem = self.editButtonItem;
 	
-	NSArray *buttons = [NSArray arrayWithObjects: addButton, nil];
+	NSArray *buttons = [NSArray arrayWithObjects: addButton, quickTextNoteButton, quickPhotoNoteButton, quickAudioNoteButton, nil];
 	
 	self.toolbarItems=buttons;
 	
@@ -64,6 +80,46 @@
 	[myAlertView release];
 	[self.tableView reloadData];
 }
+
+-(void)quickTextNote
+{
+	[self.categoryViewController quickNote:TextNoteType];
+	if([categoryList count] <= 0)
+	{
+		[categoryList addNewCategory];
+	}
+	[self.tableView reloadData];
+	self.categoryViewController.title = [[categoryList categoryAtIndex:0] title];
+	[self.categoryViewController setCategory: [categoryList categoryAtIndex:0]];
+	[self.navigationController pushViewController:self.categoryViewController animated:YES];
+}
+
+-(void)quickPhotoNote
+{
+	[self.categoryViewController quickNote:PhotoNoteType];
+	if([categoryList count] <= 0)
+	{
+		[categoryList addNewCategory];
+	}
+	[self.tableView reloadData];
+	self.categoryViewController.title = [[categoryList categoryAtIndex:0] title];
+	[self.categoryViewController setCategory: [categoryList categoryAtIndex:0]];
+	[self.navigationController pushViewController:self.categoryViewController animated:YES];
+}
+
+-(void)quickAudioNote
+{
+	[self.categoryViewController quickNote:AudioNoteType];
+	if([categoryList count] <= 0)
+	{
+		[categoryList addNewCategory];
+	}
+	[self.tableView reloadData];
+	self.categoryViewController.title = [[categoryList categoryAtIndex:0] title];
+	[self.categoryViewController setCategory: [categoryList categoryAtIndex:0]];
+	[self.navigationController pushViewController:self.categoryViewController animated:YES];
+}
+
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {

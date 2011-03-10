@@ -23,14 +23,19 @@
 	EditPhotoNoteViewController *editPhotoNote;
 	EditAudioNoteViewController *editAudioNote;
 	//IBOutlet UITextField *noteTitle, *noteBody;
+	BOOL quickNote;
+	NoteType noteType;
 }
 
 @property (nonatomic, retain) Category *category;
 @property (nonatomic, retain) EditTextNoteViewController *editTextNote;
 @property (nonatomic, retain) EditPhotoNoteViewController *editPhotoNote;
 @property (nonatomic, retain) EditAudioNoteViewController *editAudioNote;
+@property (assign) BOOL quickNote;
+@property (assign) NoteType noteType;
 
 -(void)addNote;
 -(IBAction)showActionSheet:(id)sender;
+-(void)quickNote:(NoteType)inputNoteType;
 
 @end

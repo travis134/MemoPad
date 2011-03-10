@@ -11,7 +11,7 @@
 
 @implementation CategoryViewController
 
-@synthesize category, editTextNote, editPhotoNote, editAudioNote;
+@synthesize category, editTextNote, editPhotoNote, editAudioNote, quickNote, noteType;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -95,17 +95,58 @@
 	[self showActionSheet:nil];
 }
 
+-(void)quickNote:(NoteType)inputNoteType
+{
+	[self setNoteType:inputNoteType];
+	[self setQuickNote:YES];
+}
+
 
 - (void)viewWillAppear:(BOOL)animated {
 	[self.tableView reloadData];
     [super viewWillAppear:animated];
 }
 
-/*
+
 - (void)viewDidAppear:(BOOL)animated {
+	if(self.quickNote)
+	{
+		if(self.noteType == TextNoteType)
+		{
+			[self setQuickNote:NO];
+			[category addNewTextNote];
+			[self.tableView reloadData];
+			[self.editTextNote setTextNote: (TextNote*) [category noteAtIndex:([category count]-1)]];
+			[UIView beginAnimations:@"animation" context:nil];
+			[UIView setAnimationDuration:0.5];
+			[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO]; 
+			[self.navigationController pushViewController:self.editTextNote animated:NO];
+			[UIView commitAnimations];
+		}else if(self.noteType == PhotoNoteType){
+			[self setQuickNote:NO];
+			[category addNewPhotoNote];
+			[self.tableView reloadData];
+			[self.editPhotoNote setPhotoNote: (PhotoNote*) [category noteAtIndex:([category count]-1)]];
+			[UIView beginAnimations:@"animation" context:nil];
+			[UIView setAnimationDuration:0.5];
+			[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO]; 
+			[self.navigationController pushViewController:self.editPhotoNote animated:NO];
+			[UIView commitAnimations];
+		}else if(self.noteType == AudioNoteType){
+			[self setQuickNote:NO];
+			[category addNewAudioNote];
+			[self.tableView reloadData];
+			[self.editAudioNote setAudioNote: (AudioNote*) [category noteAtIndex:([category count]-1)]];
+			[UIView beginAnimations:@"animation" context:nil];
+			[UIView setAnimationDuration:0.5];
+			[UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.navigationController.view cache:NO]; 
+			[self.navigationController pushViewController:self.editAudioNote animated:NO];
+			[UIView commitAnimations];
+		}
+	}
     [super viewDidAppear:animated];
 }
-*/
+
 /*
 - (void)viewWillDisappear:(BOOL)animated {
 	[super viewWillDisappear:animated];
